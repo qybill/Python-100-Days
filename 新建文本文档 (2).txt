@@ -1,0 +1,27 @@
+def f(x,y):
+    if (x<y):
+        (x,y)=(y,x)
+    for i in range(y,0,-1):
+        if (x%i == 0 and y%i == 0):
+            print('最大公约数为',i)
+            break
+    a = x * y // i
+    print('最小公倍数为',a)
+x = int(input('第一个数:'))
+y = int(input('第二个数:'))
+f(x,y)
+##################################
+def is_palindrome(num):
+    temp = num
+    j = 0
+    while (temp>0):
+        j = j*10 + temp%10
+        temp = temp // 10
+    return j 
+    
+num = int(input('请输入一个数'))
+is_palindrome(num)
+if (num == is_palindrome(num) ):
+        print('是')
+else:
+        print('不是')
